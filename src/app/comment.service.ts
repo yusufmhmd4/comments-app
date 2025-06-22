@@ -11,7 +11,7 @@ export class CommentService {
     const storedComments = localStorage.getItem("commentData");
     if (storedComments) {
       this.commentsList = JSON.parse(storedComments);
-      this.commentSubject.next(this.commentsList); // emit loaded data
+      this.commentSubject.next(this.commentsList);
     }
   }
 

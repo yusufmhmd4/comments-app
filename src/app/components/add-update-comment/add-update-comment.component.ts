@@ -1,4 +1,3 @@
-import { CommentComponent } from './../comment/comment.component';
 import { CommentService } from './../../comment.service';
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';

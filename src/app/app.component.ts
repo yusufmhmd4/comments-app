@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { AddUpdateCommentComponent } from './components/add-update-comment/add-update-comment.component';
-import { CommonModule, NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { TabsCategoryComponent } from './components/tabs-category/tabs-category.component';
 import { CommentComponent } from './components/comment/comment.component';
 
-import DummyData from "./lib/dummyData.json"
 import { FormsModule } from '@angular/forms';
 import { CommentService } from './comment.service';
 import { UserComment } from './lib/interfaces';
@@ -30,7 +29,7 @@ export class AppComponent {
     this.commentService.getAllComments().subscribe((data: UserComment[]) => {
       this.commentsData = data
       this.initialCommentData = data
-      console.log(data)
+      this.filterComments()
     })
   }
 
@@ -51,25 +50,33 @@ export class AppComponent {
     this.showAddComment = false
   }
 
-  changeSearchInput() {
-    this.commentsData = this.initialCommentData.filter((comment: UserComment) => comment.name.toLocaleLowerCase().includes(this.searchInput.toLocaleLowerCase()) || comment.comment.toLocaleLowerCase().includes(this.searchInput.toLocaleLowerCase()))
-  }
+  filterComments() {
+    const searchValue = this.searchInput.toLowerCase();
 
+    let filteredComments = this.initialCommentData;
 
-  setTab(selectedTab: string) {
-    this.selectedTab = selectedTab
     switch (this.selectedTab) {
-      case "ALL":
-        this.commentsData = this.initialCommentData
-        break;
       case "LIKED":
-        this.commentsData = this.initialCommentData.filter(comment => comment.isLiked)
+        filteredComments = filteredComments.filter(comment => comment.isLiked);
         break;
       case "DISLIKED":
-        this.commentsData = this.initialCommentData.filter(comment => !comment.isLiked)
-        break;
-      default:
+        filteredComments = filteredComments.filter(comment => !comment.isLiked);
         break;
     }
+
+    this.commentsData = filteredComments.filter(comment =>
+      comment.name.toLowerCase().includes(searchValue) ||
+      comment.comment.toLowerCase().includes(searchValue)
+    );
   }
+
+  changeSearchInput() {
+    this.filterComments();
+  }
+
+  setTab(selectedTab: string) {
+    this.selectedTab = selectedTab;
+    this.filterComments();
+  }
+
 }

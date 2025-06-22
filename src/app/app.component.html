@@ -10,6 +10,9 @@
     <ng-container *ngFor="let commentData of commentsData">
       <app-comment [commentData]="commentData"></app-comment>
     </ng-container>
+    <div class="empty-container" *ngIf="!commentsData.length">
+      <h1>Empty Data</h1>
+    </div>
   </div>
 </div>
 

@@ -1,0 +1,5 @@
+<div class="tabs-container">
+    <button [class]="{'selected-tab': selectedTab==='ALL'}" (click)="setTab('ALL')">All</button>
+    <button [class]="{'selected-tab': selectedTab==='LIKED'}" (click)="setTab('LIKED')">Liked</button>
+    <button [class]="{'selected-tab': selectedTab==='DISLIKED'}" (click)="setTab('DISLIKED')">DisLiked</button>
+</div>

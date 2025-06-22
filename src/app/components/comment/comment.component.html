@@ -1,0 +1,14 @@
+<div class="comment">
+    <div class="name-date">
+        <h6>{{commentData.name}}</h6>
+        <p>{{getRelativeTime(commentData.datePosted)}}</p>
+    </div>
+    <p class="comment-des">{{commentData.comment}}</p>
+    <button (click)="likeComment()">
+        {{ commentData.isLiked ? '👍' : '👎'}}
+    </button>
+    <button class="delete-comment" (click)="deleteComment()">
+        ❌
+    </button>
+    <hr>
+</div>

@@ -1,0 +1,27 @@
+.tabs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 16px;
+
+    width: 100%;
+    max-width: 450px;
+}
+
+button {
+    height: 28px;
+    width: 70px;
+    padding: 4px 6px;
+    border: 1px solid #5f4d4d;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.selected-tab {
+    background-color: rgb(110, 57, 66);
+}

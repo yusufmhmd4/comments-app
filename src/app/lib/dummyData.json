@@ -1,0 +1,30 @@
+[
+  {
+    "id": "a8f3b6d2-4b56-4830-89f2-1d57ef2a9d01",
+    "name": "Yusuf",
+    "comment": "Great post!",
+    "isLiked": true,
+    "datePosted": "2025-06-18T09:30:25.000Z"
+  },
+  {
+    "id": "2c91e8a4-79f9-4f6c-b1f0-53c60e9c44d4",
+    "name": "Ayesha",
+    "comment": "Thanks for sharing.",
+    "isLiked": false,
+    "datePosted": "2025-06-19T13:42:10.000Z"
+  },
+  {
+    "id": "61fa821c-0c1b-4f7f-bc12-093d30b2448d",
+    "name": "Rahul",
+    "comment": "Loved it!",
+    "isLiked": true,
+    "datePosted": "2025-06-20T17:15:40.000Z"
+  },
+  {
+    "id": "d68d76a1-3c1d-4f0e-8e59-2b00b9e01c27",
+    "name": "Sneha",
+    "comment": "Could you explain more?",
+    "isLiked": false,
+    "datePosted": "2025-06-15T08:05:55.000Z"
+  }
+]

@@ -1,0 +1,12 @@
+<div class="dialog-container">
+    <div class="add-comment-container">
+        <h1>{{commentName}}</h1>
+        <input required type="text" placeholder="Name....." [(ngModel)]="name" (blur)="onBlur()">
+        <p style="font-size: 14px; color: rgb(8, 104, 59); margin-right: auto;" *ngIf="requiredName">*Name is required</p>
+        <textarea placeholder="Comment....." [rows]="10" [(ngModel)]="comment"></textarea>
+        <div class="btn-container">
+            <button (click)="closeModalDialog()">Cancel</button>
+            <button (click)="addNewComment()">Save</button>
+        </div>
+    </div>
+</div>

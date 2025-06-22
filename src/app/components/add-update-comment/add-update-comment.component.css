@@ -1,0 +1,65 @@
+.dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(135, 135, 184), rgb(147, 212, 147), rgb(187, 138, 138), rgb(182, 125, 182));
+    position: absolute;
+    top: 0;
+    padding: 10px;
+
+}
+
+.add-comment-container {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+h1 {
+    color: #222;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #5f4d4d;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 6px;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #fff;
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+.btn-container {
+    align-self: flex-end;
+    margin-top: 15px;
+}
+
+button {
+    height: 28px;
+    width: 70px;
+    padding: 4px 6px;
+    border: 1px solid #5f4d4d;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}

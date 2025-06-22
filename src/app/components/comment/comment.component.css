@@ -21,6 +21,7 @@ h6 {
 .comment-des {
     font-size: 18px;
     margin-bottom: 8px;
+    color: #d4d4e9;
 }
 
 button {
@@ -36,6 +37,6 @@ button {
     right: 20px;
 }
 
-hr{
+hr {
     margin-top: 10px;
 }
